@@ -7,6 +7,10 @@
 enabled_site_setting :github_linkback_enabled
 
 after_initialize do
+  AdminDashboardData.add_problem_check do
+    I18n.t("github_linkback.not_supported")
+  end
+
   require_dependency File.expand_path('../app/lib/github_linkback.rb', __FILE__)
   require_dependency File.expand_path('../app/jobs/regular/create_github_linkback.rb', __FILE__)
 
@@ -18,4 +22,3 @@ after_initialize do
     GithubLinkback.new(post).enqueue
   end
 end
-
