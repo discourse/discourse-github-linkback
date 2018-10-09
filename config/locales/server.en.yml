@@ -4,6 +4,7 @@ en:
     github_linkback_projects: "List of projects to link back from"
     github_linkback_access_token: "A valid access token for the user who will post the linkback"
   github_linkback:
+    not_supported: 'The <b>discourse-github-linkback</b> plugin is no longer supported. Please migrate to the <b><a href="https://github.com/discourse/discourse-github">discourse-github</a></b> plugin, which supports the same functionality.'
     commit_template: |
       This commit has been mentioned on **%{title}**. There might be relevant details there:
 
